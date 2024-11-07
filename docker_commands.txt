@@ -1,0 +1,2 @@
+docker build -t creeps .
+docker run -d -p 5001:80 creeps
