@@ -4,9 +4,9 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1731343983|11724621246';
+const CACHE_VERSION = '1734692789|9216991594';
 /** @type {string} */
-const CACHE_PREFIX = 'Dodge the Creeps-sw-cache-';
+const CACHE_PREFIX = 'Tilt To Survive-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
 /** @type {string} */
 const OFFLINE_URL = 'index.offline.html';

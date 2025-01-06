@@ -1,2 +1,7 @@
-docker build -t creeps .
-docker run -d -p 5001:80 creeps
+docker build -t tilt_to_survive web
+docker run -d -p 5001:80 tilt_to_survive
+
+
+#ffom inside proxy folder
+docker compose up -d 
+
