@@ -17,6 +17,6 @@ jobs:
         docker build ./web/ --file ./web/Dockerfile --tag tilt-to-survive:$(date +%s)
     - name: Push image to docker hub
       run: |
-        docker login -u LobinArcolungo -p ${{secrets.DOCKER_HUB_TOKEN}}
+        docker login -u lobinarcolungo -p ${{secrets.DOCKER_HUB_TOKEN}}
         docker pull lobinarcolungo/tilt_to_survive:latest
       
