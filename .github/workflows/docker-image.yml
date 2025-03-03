@@ -13,7 +13,10 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
+      run: 
+        docker build ./web/ --file Dockerfile --tag tilt-to-survive:$(date +%s)
+    - name: Push image to docker hub
       run: |
         docker login -u LobinArcolungo -p ${{secrets.DOCKER_HUB_TOKEN}}
-        docker build ./web/ --file Dockerfile --tag tilt-to-survive:$(date +%s)
+        docker pull lobinarcolungo/tilt_to_survive:latest
       
