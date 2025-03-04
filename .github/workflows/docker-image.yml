@@ -14,9 +14,12 @@ jobs:
     - uses: actions/checkout@v4
     - name: Build the Docker image
       run: |
-        docker build ./web/ --file ./web/Dockerfile --tag lobinarcolungo/tilt_to_survive:latest
+        docker build ./web/ --file ./web/Dockerfile --tag gcr.io/deductive-tempo-452710-u2/tilt_to_survive:latest --tag lobinarcolungo/tilt_to_survive:latest
+        
     - name: Push image to docker hub
       run: |
         docker login -u lobinarcolungo -p ${{secrets.DOCKER_HUB_TOKEN}}
         docker push lobinarcolungo/tilt_to_survive:latest
+        docker push gcr.io/deductive-tempo-452710-u2/tilt_to_survive:latest
+
       
