@@ -14,10 +14,9 @@ jobs:
     - uses: actions/checkout@v4
     - name: Build the Docker image
       run: |
-        export NOW="$(date +%Y%m%d)"
-        docker build ./web/ --file ./web/Dockerfile --tag lobinarcolungo/tilt_to_survive:$NOW
+        docker build ./web/ --file ./web/Dockerfile --tag lobinarcolungo/tilt_to_survive:latest
     - name: Push image to docker hub
       run: |
         docker login -u lobinarcolungo -p ${{secrets.DOCKER_HUB_TOKEN}}
-        docker push lobinarcolungo/tilt_to_survive:$NOW
+        docker push lobinarcolungo/tilt_to_survive:latest
       
