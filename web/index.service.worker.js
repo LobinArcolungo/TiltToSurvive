@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1739457307|991126514';
+const CACHE_VERSION = '1739465167|8850926695';
 /** @type {string} */
 const CACHE_PREFIX = 'Tilt To Survive-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
