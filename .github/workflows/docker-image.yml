@@ -18,5 +18,5 @@ jobs:
     - name: Push image to docker hub
       run: |
         docker login -u lobinarcolungo -p ${{secrets.DOCKER_HUB_TOKEN}}
-        docker push lobinarcolungo/tilt_to_survive
+        docker push lobinarcolungo/tilt_to_survive:$(date +%s)
       
