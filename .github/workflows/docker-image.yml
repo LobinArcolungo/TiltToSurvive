@@ -20,6 +20,6 @@ jobs:
       run: |
         docker login -u lobinarcolungo -p ${{secrets.DOCKER_HUB_TOKEN}}
         docker push lobinarcolungo/tilt_to_survive:latest
-        docker push gcr.io/deductive-tempo-452710-u2/tilt-to-survive:latest
+        #docker push gcr.io/deductive-tempo-452710-u2/tilt-to-survive:latest
 
       
