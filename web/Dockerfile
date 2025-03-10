@@ -9,4 +9,4 @@ COPY nginx.conf /etc/nginx.conf
 
 COPY . /usr/share/nginx/html
 
-EXPOSE 8080
+EXPOSE $PORT
