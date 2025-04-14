@@ -7,8 +7,8 @@
 This repository aims at reproducing this cool mobile game, which has been lost throughout software and hardware updates, in a webapp game format. The final goal is to be able to play this game for free from everywhere also thanks to a kubernetes cluster implementation.
 
 #### Ispiration:
-This video is an example of a small match:
-<img src=images/ttl_video.gif>
+This video is an example of a small match:<br>
+
 
 ## The Game Engine
 As a game engine I'm ussing Godot as it's open source and fairly simple to get started with

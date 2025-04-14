@@ -9,7 +9,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	get_tree().call_group("enemies","update_direction",$Player.position)
+	get_tree().call_group("enemies","update_direction",$PlayerArea/Player.position)
 	
 	pass
 
@@ -23,7 +23,7 @@ func game_over():
 	
 func new_game():
 	score=0
-	$Player.start($StartPostition.position)
+	$PlayerArea/Player.start($PlayerArea/StartPostition.position)
 	$StartTimer.start()
 	
 	$HUD.update_score(score)
@@ -39,7 +39,7 @@ func _on_mob_timer_timeout():
 	#var direction = mob_spawn_location.rotation +PI/2
 	
 	mob.position = mob_spawn_location.position
-	var direction = Vector2($Player.position-mob_spawn_location.position).normalized().angle()
+	var direction = Vector2($PlayerArea/Player.position-mob_spawn_location.position).normalized().angle()
 	 
 	#direction += randf_range(-PI/4,PI/4)
 	mob.rotation = direction
